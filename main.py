@@ -46,6 +46,7 @@ def print_recipe_path(node):
 if __name__ == "__main__":
     tree = CocktailTree()
     tree.build_tree_from_docx("Cocktail_Tree.docx")   # 실제 docx 파일 경로
+    print("test")
 
     # 1) 전체 트리 구조 먼저 출력
     print("\n📋 칵테일 트리 전체 구조")
