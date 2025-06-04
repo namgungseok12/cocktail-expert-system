@@ -3,10 +3,12 @@
 import os
 import sys
 
+
 # 현재 파일과 동일한 디렉터리에 CocktailTree.py, CocktailNode.py가 있다고 가정
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from CocktailTree import CocktailTree
+from UserData import UserData
 
 
 def print_recipe_path(node):
@@ -50,19 +52,90 @@ def printMenu():
     print("│ 3. 현재 만들 수 있는 칵테일 조회하기 │")
     print("│ 4. 갖고 있는 재료 조회하기           │")
     print("│ 5. 재료 추가하기                     │")
-    print("│ 6. 종료하기                          │")
+    print("│ 6. 로그아웃하기                      │")
+    print("│ 7. 종료하기                          │")
     print("└──────────────────────────────────────┘")
+    
+def printLogin():
+    print("")
+    print("┌──── <Login> ────┐")
+    print("│ 1. 로그인하기   │")
+    print("│ 2. 회원가입하기 │")
+    print("│ 3. 종료하기     │")
+    print("└─────────────────┘")
+
+def getPin() -> int:
+    while True:
+        try:
+            pin = int(input("▶ 핀번호를 입력하세요: "))
+            break
+        except:
+            print("   핀번호를 다시 입력해주세요.")
+    return pin
+                    
+def login() -> dict:
+    isRestart = True
+    while True:
+        if isRestart: printLogin()
+        else: isRestart = True
+        
+        try:
+            command = int(input("▶ 사용할 기능의 번호를 입력하세요: "))
+        except:
+            isRestart = False
+            print("   번호를 다시 입력해주세요.")
+            continue
+        
+        if command == 1:    # 로그인
+            pin = getPin()
+            if userData.isValid(pin):
+                my_ingredients = userData.load_data(pin)
+                return pin, my_ingredients
+            else:
+                print("  유효하지 않은 핀번호입니다.")
+                isRestart = False
+                
+        elif command == 2:  # 회원가입
+            pin = getPin()
+            if userData.isValid(pin):
+                print("  이미 사용중인 핀번호입니다.")
+            else:
+                my_ingredients = {}
+                userData.save_data(pin, my_ingredients)
+                print("  회원가입이 완료되었습니다.")
+                return pin, my_ingredients
+            
+        elif command == 3:
+            global shutdown
+            shutdown = True
+            return None, None
+        
+        else:
+            isRestart = False
+            print("  번호를 다시 입력해주세요.")
+            continue
 
 if __name__ == "__main__":
     tree = CocktailTree()
     tree.build_tree_from_docx("Cocktail_Tree.docx")   # 실제 docx 파일 경로
+    userData = UserData()
+    
     
     # 예시 재료 세트 (필요에 따라 수정 가능)
-    my_ingredients = {"Gin", "Dry Vermouth", "Olive Brine", "Olive Garnish"}
+    my_ingredients = dict()
 
-    print("칵테일 프로그램을 시작합니다.")
     isRestart = True
-    while True:
+    islogin = False
+    shutdown = False
+    
+    print("칵테일 프로그램을 시작합니다.")
+    while not shutdown:
+        if not islogin:
+            pin, my_ingredients = login()
+            islogin = True
+        
+        if shutdown: break
+        
         # 번호를 잘못 입력한 경우, 메뉴를 다시 출력하지 않음
         if isRestart: printMenu()
         else: isRestart = True
@@ -75,8 +148,11 @@ if __name__ == "__main__":
             print("번호를 다시 입력해주세요.")
             continue
         
-        if command == 1: tree.print_tree()  # 칵테일 트리 전체 구조 보기
+        if command == 1: 
+            print("\n📋 칵테일 트리 전체 구조")
+            tree.print_tree()  # 칵테일 트리 전체 구조 보기
         elif command == 2:  # 칵테일의 정보 조회하기
+            print("\n🔍 어떤 칵테일의 정보를 조회하시겠습니까?")
             cocktail_name = input("▶ 칵테일 이름을 입력하세요: ").strip()
 
             # 입력받은 이름으로 노드 탐색
@@ -112,10 +188,14 @@ if __name__ == "__main__":
         elif command == 5:  # 재료 추가하기
             cocktail_name = input("▶ 추가할 칵테일 이름을 입력하세요: ").strip()
             my_ingredients.add(cocktail_name)
-        elif command == 6:  # 종료하기
-            print("   프로그램을 종료합니다.")
+            userData.save_data(pin, my_ingredients)
+        elif command == 6:
+            islogin = False
+        elif command == 7:  # 종료하기
+            shutdown = True
+            print("  프로그램을 종료합니다.")
             break
         else:
             isRestart = False
-            print("   번호를 다시 입력해주세요.")
+            print("  번호를 다시 입력해주세요.")
             continue
