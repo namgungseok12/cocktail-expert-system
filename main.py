@@ -73,7 +73,7 @@ def getPin() -> int:
             print("   핀번호를 다시 입력해주세요.")
     return pin
                     
-def login() -> dict:
+def login() -> int|set:
     isRestart = True
     while True:
         if isRestart: printLogin()
@@ -122,7 +122,7 @@ if __name__ == "__main__":
     
     
     # 예시 재료 세트 (필요에 따라 수정 가능)
-    my_ingredients = dict()
+    my_ingredients = set()
 
     isRestart = True
     islogin = False
