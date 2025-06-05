@@ -33,7 +33,7 @@ def build_json_from_tree(tree: CocktailTree) -> dict:
 if __name__ == "__main__":
     # 3) 트리 생성
     tree = CocktailTree()
-    tree.build_tree_from_docx(DOCX_PATH)
+    tree.build_tree_from_json(DOCX_PATH)
 
     # 4) JSON으로 변환
     tree_dict = build_json_from_tree(tree)
