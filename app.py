@@ -184,6 +184,10 @@ def main_menu():
             # 플래그 즉시 삭제 → 딱 한 번만 지워 줍니다
             st.session_state["add_submitted"] = False
 
+        if st.session_state.get("del_submitted", False):
+            st.session_state["del_ingredient_input"] = ""
+            st.session_state["del_submitted"] = False
+            
         # 4-2) 재료 추가를 위한 폼
         with st.form(key="add_form"):
             st.subheader("➕ 냉장고에 재료 추가하기")
@@ -206,24 +210,28 @@ def main_menu():
                     st.rerun()
                 else:
                     st.error("빈칸은 추가할 수 없습니다.")
-                
+        
         st.markdown("---")
         # 4-3) 재료 삭제 입력창
-        st.subheader("➖ 냉장고의 재료 삭제하기")
-        del_ing = st.text_input("삭제할 재료를 입력하세요", key="del_ingredient_input")
-        if st.button("삭제하기"):
-            item = del_ing.strip()
-            if item and item in st.session_state.my_ingredients:
-                st.session_state.my_ingredients.remove(item)
-                userData.save_data(st.session_state.pin, st.session_state.my_ingredients)
-                st.success(f"'{item}' 재료가 삭제되었습니다.")
-                
-                # 추가 후 화면 갱신
-                st.rerun()
-            elif item:
-                st.error(f"{item} 재료는 냉장고에 없습니다.")
-            else:
-                st.error("빈칸은 삭제할 수 없습니다.")
+        with st.form(key="del_form"):
+            st.subheader("➖ 냉장고의 재료 삭제하기")
+            del_ing = st.text_input(
+                "삭제할 재료를 입력하세요",
+                key="del_ingredient_input"
+            )
+            del_btn = st.form_submit_button("삭제하기")
+
+            if del_btn:
+                item = del_ing.strip()
+                if item:
+                    st.session_state.my_ingredients.remove(item)
+                    userData.save_data(st.session_state.pin, st.session_state.my_ingredients)
+                    st.success(f"'{item}' 재료가 삭제되었습니다.")
+                    st.session_state["del_submitted"] = True
+                    st.rerun()
+                else:
+                    st.error("빈칸은 삭제제할 수 없습니다.")
+                    
 
     # ───────────────────────────────────────────────────────────────────────────────
     # 5. 추천 재료 보기
