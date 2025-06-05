@@ -1,0 +1,763 @@
+{
+    "name": "Empty Glass",
+    "ingredients": [],
+    "children": [
+        {
+            "name": "Gin",
+            "ingredients": [],
+            "children": [
+                {
+                    "name": "Dry Martini",
+                    "ingredients": [
+                        "Dry Vermouth"
+                    ],
+                    "children": [
+                        {
+                            "name": "Dirty Martini",
+                            "ingredients": [
+                                "Olive Brine"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Classic Dirty Martini",
+                                    "ingredients": [
+                                        "Olive Garnish"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Gibson",
+                            "ingredients": [
+                                "Cocktail Onion"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Bitter Gibson",
+                                    "ingredients": [
+                                        "Orange Bitters"
+                                    ],
+                                    "children": []
+                                },
+                                {
+                                    "name": "Gibson Twist",
+                                    "ingredients": [
+                                        "Lemon Twist"
+                                    ],
+                                    "children": []
+                                },
+                                {
+                                    "name": "Garden Gibson",
+                                    "ingredients": [
+                                        "Celery Bitters"
+                                    ],
+                                    "children": []
+                                },
+                                {
+                                    "name": "Pickled Gibson",
+                                    "ingredients": [
+                                        "Pickle Brine"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Marguerite",
+                            "ingredients": [
+                                "Orange Bitters"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Classic Marguerite",
+                                    "ingredients": [
+                                        "Lemon Zest"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Turf Club",
+                            "ingredients": [
+                                "Angostura Bitters"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Turf Cocktail (Savoy)",
+                                    "ingredients": [
+                                        "Maraschino"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Valencia",
+                            "ingredients": [
+                                "Apricot Brandy"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Valencia Sunrise",
+                                    "ingredients": [
+                                        "Orange Peel"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Torpedo",
+                            "ingredients": [
+                                "Anise Liqueur"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Citrus Torpedo",
+                                    "ingredients": [
+                                        "Lemon Juice"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Sweet Martini",
+                    "ingredients": [
+                        "Sweet Vermouth"
+                    ],
+                    "children": [
+                        {
+                            "name": "Martinez",
+                            "ingredients": [
+                                "Maraschino"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Classic Martinez",
+                                    "ingredients": [
+                                        "Orange Bitters"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Opera Cocktail",
+                            "ingredients": [
+                                "Cherry Brandy"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Bright Opera",
+                                    "ingredients": [
+                                        "Lemon Zest"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Perfect Martini",
+                    "ingredients": [
+                        "Dry Vermouth"
+                    ],
+                    "children": [
+                        {
+                            "name": "Bronx",
+                            "ingredients": [
+                                "Orange Juice"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Bronx Dry",
+                                    "ingredients": [
+                                        "Orange Bitters"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Rosita Cocktail",
+                            "ingredients": [
+                                "Campari"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Rosita Garnished",
+                                    "ingredients": [],
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Vodka",
+            "ingredients": [],
+            "children": [
+                {
+                    "name": "Vodka Martini",
+                    "ingredients": [
+                        "Dry Vermouth"
+                    ],
+                    "children": [
+                        {
+                            "name": "Dirty Vodka Martini",
+                            "ingredients": [
+                                "Olive Brine"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Classic Dirty Vodka",
+                                    "ingredients": [
+                                        "Orange Twist",
+                                        "Olive Garnish"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Vodka Marguerite",
+                            "ingredients": [
+                                "Orange Bitters"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Vodka Citrus Martini",
+                                    "ingredients": [
+                                        "Lemon Twist"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Vesper (James Bond style)",
+                            "ingredients": [
+                                "Lemon Twist",
+                                "Lillet Blanc"
+                            ],
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Screwdriver",
+                    "ingredients": [
+                        "Orange Juice"
+                    ],
+                    "children": [
+                        {
+                            "name": "Harvey Wallbanger",
+                            "ingredients": [
+                                "Galliano"
+                            ],
+                            "children": []
+                        },
+                        {
+                            "name": "Vodka Sunrise",
+                            "ingredients": [
+                                "Triple Sec",
+                                "Grenadine"
+                            ],
+                            "children": []
+                        },
+                        {
+                            "name": "Vodka Mimosa",
+                            "ingredients": [
+                                "Champagne"
+                            ],
+                            "children": []
+                        },
+                        {
+                            "name": "Orange Crush",
+                            "ingredients": [
+                                "Orange Soda"
+                            ],
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Greyhound",
+                    "ingredients": [
+                        "Grapefruit Juice"
+                    ],
+                    "children": [
+                        {
+                            "name": "Salty Dog",
+                            "ingredients": [
+                                "Salt Rim"
+                            ],
+                            "children": []
+                        },
+                        {
+                            "name": "Sea Breeze",
+                            "ingredients": [
+                                "Cranberry Juice"
+                            ],
+                            "children": []
+                        },
+                        {
+                            "name": "Finnish Long Drink",
+                            "ingredients": [
+                                "Lemon-Lime Soda"
+                            ],
+                            "children": []
+                        },
+                        {
+                            "name": "Aperhound",
+                            "ingredients": [
+                                "Aperol"
+                            ],
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Bloody Mary",
+                    "ingredients": [
+                        "Tomato Juice",
+                        "Lemon Juice",
+                        "Worcestershire",
+                        "Hot Sauce",
+                        "Spices"
+                    ],
+                    "children": []
+                },
+                {
+                    "name": "Espresso Martini",
+                    "ingredients": [
+                        "Coffee Liqueur"
+                    ],
+                    "children": [
+                        {
+                            "name": "Classic Espresso Martini",
+                            "ingredients": [
+                                "Fresh Espresso"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Dick Bradsell’s Recipe",
+                                    "ingredients": [],
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Black Russian",
+                    "ingredients": [],
+                    "children": [
+                        {
+                            "name": "White Russian",
+                            "ingredients": [
+                                "Cream"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Mudslide",
+                                    "ingredients": [
+                                        "Sugar Syrup",
+                                        "Irish Cream"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Apple Martini (Appletini)",
+                    "ingredients": [
+                        "Apple Liqueur"
+                    ],
+                    "children": [
+                        {
+                            "name": "Sour Appletini",
+                            "ingredients": [
+                                "Lemon Juice"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Balanced Appletini",
+                                    "ingredients": [
+                                        "Simple Syrup"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Kamikaze",
+                    "ingredients": [
+                        "Triple Sec",
+                        "Lime Juice"
+                    ],
+                    "children": [
+                        {
+                            "name": "Cosmopolitan",
+                            "ingredients": [
+                                "Cranberry Juice"
+                            ],
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Chocolate Martini",
+                    "ingredients": [
+                        "Chocolate Liqueur"
+                    ],
+                    "children": [
+                        {
+                            "name": "Chocolate Cream Martini",
+                            "ingredients": [
+                                "Cream"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Dessert Martini",
+                                    "ingredients": [],
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Tequila",
+            "ingredients": [],
+            "children": [
+                {
+                    "name": "Tequila Sour",
+                    "ingredients": [
+                        "Lime Juice"
+                    ],
+                    "children": [
+                        {
+                            "name": "Margarita",
+                            "ingredients": [
+                                "Triple Sec"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Fruit Margaritas",
+                                    "ingredients": [
+                                        "Strawberry"
+                                    ],
+                                    "children": []
+                                },
+                                {
+                                    "name": "Beergarita",
+                                    "ingredients": [
+                                        "Beer"
+                                    ],
+                                    "children": []
+                                },
+                                {
+                                    "name": "Spicy Margarita",
+                                    "ingredients": [
+                                        "Jalapeño"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Tequila Sunrise",
+                    "ingredients": [
+                        "Orange Juice"
+                    ],
+                    "children": [
+                        {
+                            "name": "Classic Tequila Sunrise",
+                            "ingredients": [
+                                "Grenadine"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Tequila Sunset",
+                                    "ingredients": [
+                                        "Soda Water"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Paloma",
+                    "ingredients": [
+                        "Grapefruit Soda"
+                    ],
+                    "children": [
+                        {
+                            "name": "Classic Paloma",
+                            "ingredients": [
+                                "Lime Juice",
+                                "Salt Rim"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Sweet Paloma",
+                                    "ingredients": [
+                                        "Agave Syrup"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Bloody Maria",
+                    "ingredients": [
+                        "Tomato Juice",
+                        "Lime Juice",
+                        "Hot Sauce",
+                        "Worcestershire",
+                        "Salt"
+                    ],
+                    "children": [
+                        {
+                            "name": "Garden Bloody Maria",
+                            "ingredients": [
+                                "Celery Garnish"
+                            ],
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Matador",
+                    "ingredients": [
+                        "Pineapple Juice"
+                    ],
+                    "children": [
+                        {
+                            "name": "Classic Matador",
+                            "ingredients": [
+                                "Lime Juice"
+                            ],
+                            "children": [
+                                {
+                                    "name": "Balanced Matador",
+                                    "ingredients": [
+                                        "Simple Syrup"
+                                    ],
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Brave Bull",
+                    "ingredients": [
+                        "Coffee Liqueur"
+                    ],
+                    "children": [
+                        {
+                            "name": "White Bull",
+                            "ingredients": [
+                                "Cream"
+                            ],
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Tequini",
+                    "ingredients": [
+                        "Dry  Vermouth"
+                    ],
+                    "children": [
+                        {
+                            "name": "Tequila Martini (Savory style)",
+                            "ingredients": [
+                                "Orange Bitters"
+                            ],
+                            "children": []
+                        },
+                        {
+                            "name": "Classic Tequini",
+                            "ingredients": [
+                                "Olive",
+                                "Lemon Twist"
+                            ],
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Whiskey",
+            "ingredients": [],
+            "children": [
+                {
+                    "name": "Old Fashioned",
+                    "ingredients": [
+                        "Sugar",
+                        "Bitters"
+                    ],
+                    "children": [
+                        {
+                            "name": "Classic Garnish",
+                            "ingredients": [
+                                "Orange Slice",
+                                "Cherry"
+                            ],
+                            "children": []
+                        },
+                        {
+                            "name": "Sazerac",
+                            "ingredients": [
+                                "Absinthe Rinse"
+                            ],
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Manhattan",
+                    "ingredients": [
+                        "Sweet Vermouth"
+                    ],
+                    "children": [
+                        {
+                            "name": "Perfect Manhattan",
+                            "ingredients": [
+                                "Dry Vermouth"
+                            ],
+                            "children": []
+                        },
+                        {
+                            "name": "Rob Roy (Scotch Manhattan)",
+                            "ingredients": [
+                                "Cherry Brandy"
+                            ],
+                            "children": []
+                        },
+                        {
+                            "name": "Black Manhattan",
+                            "ingredients": [
+                                "Amaro"
+                            ],
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Whiskey Sour",
+                    "ingredients": [
+                        "Lemon Juice",
+                        "Sugar"
+                    ],
+                    "children": [
+                        {
+                            "name": "Boston Sour",
+                            "ingredients": [
+                                "Egg White"
+                            ],
+                            "children": []
+                        },
+                        {
+                            "name": "New York Sour",
+                            "ingredients": [
+                                "Red Wine Float"
+                            ],
+                            "children": []
+                        },
+                        {
+                            "name": "Ward 8",
+                            "ingredients": [
+                                "Orange Juice"
+                            ],
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Kentucky Mule",
+                    "ingredients": [
+                        "Ginger Beer",
+                        "Lime Juice"
+                    ],
+                    "children": [
+                        {
+                            "name": "Whiskey Buck",
+                            "ingredients": [
+                                "Mint"
+                            ],
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Gold Rush",
+                    "ingredients": [
+                        "Honey Syrup",
+                        "Lemon Juice"
+                    ],
+                    "children": [
+                        {
+                            "name": "Penicillin",
+                            "ingredients": [
+                                "Ginger Liqueur"
+                            ],
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Hot Toddy",
+                    "ingredients": [
+                        "Hot Water",
+                        "Honey",
+                        "Lemon"
+                    ],
+                    "children": []
+                },
+                {
+                    "name": "Irish Coffee",
+                    "ingredients": [
+                        "Coffee",
+                        "Sugar",
+                        "Cream"
+                    ],
+                    "children": []
+                },
+                {
+                    "name": "Final Ward",
+                    "ingredients": [
+                        "Lemon Juice",
+                        "Green Chartreuse",
+                        "Maraschino"
+                    ],
+                    "children": []
+                }
+            ]
+        }
+    ]
+}
