@@ -1,6 +1,8 @@
 # app.py
 
 import streamlit as st
+from click import clear
+
 from CocktailTree import CocktailTree
 from UserData import UserData
 
@@ -173,19 +175,37 @@ def main_menu():
             st.write("아직 재료가 없습니다.")
 
         st.markdown("---")
-        # 4-2) 재료 추가 입력창
-        st.subheader("➕ 냉장고에 재료 추가하기")
-        new_ing = st.text_input("추가할 재료를 입력하세요", key="add_ingredient_input")
-        if st.button("추가하기"):
-            item = new_ing.strip()
-            if item:
-                st.session_state.my_ingredients.add(item)
-                userData.save_data(st.session_state.pin, st.session_state.my_ingredients)
-                st.success(f"'{item}' 재료가 추가되었습니다.")
-                # 추가 후 화면 갱신
-                st.rerun()
-            else:
-                st.error("빈칸은 추가할 수 없습니다.")
+
+        # ── “add_submitted=True” 플래그를 확인하여,
+        # 재실행 시(add_submitted가 True) 한 번만 텍스트를 비워 줍니다.
+        if st.session_state.get("add_submitted", False):
+            # 입력 키 “add_ingredient_input”에 빈 문자열을 대입 → 폼 전에 실행
+            st.session_state["add_ingredient_input"] = ""
+            # 플래그 즉시 삭제 → 딱 한 번만 지워 줍니다
+            st.session_state["add_submitted"] = False
+
+        # 4-2) 재료 추가를 위한 폼
+        with st.form(key="add_form"):
+            st.subheader("➕ 냉장고에 재료 추가하기")
+            new_ing = st.text_input(
+                "추가할 재료를 입력하세요",
+                key="add_ingredient_input"
+            )
+            add_btn = st.form_submit_button("추가하기")
+
+            if add_btn:
+                item = new_ing.strip()
+                if item:
+                    st.session_state.my_ingredients.add(item)
+                    userData.save_data(st.session_state.pin, st.session_state.my_ingredients)
+                    st.success(f"'{item}' 재료가 추가되었습니다.")
+                    # “다음에 렌더링할 때 입력칸 비우기” 플래그 설정
+                    st.session_state["add_submitted"] = True
+                    # rerun하면 최상단에서 add_submitted가 True인 걸 보고
+                    # add_ingredient_input을 빈 문자열로 리셋하고, 다시 False로 바꿔줍니다
+                    st.rerun()
+                else:
+                    st.error("빈칸은 추가할 수 없습니다.")
 
     # ───────────────────────────────────────────────────────────────────────────────
     # 5. 추천 재료 보기
