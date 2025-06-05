@@ -230,7 +230,7 @@ def main_menu():
                     st.session_state["del_submitted"] = True
                     st.rerun()
                 else:
-                    st.error("빈칸은 삭제제할 수 없습니다.")
+                    st.error("빈칸은 삭제할 수 없습니다.")
                     
 
     # ───────────────────────────────────────────────────────────────────────────────
