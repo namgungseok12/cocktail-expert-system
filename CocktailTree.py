@@ -18,7 +18,7 @@ class CocktailTree:
         # 초기에는 빈 트리. load_from_json을 호출해야 root가 채워집니다.
         self.root = CocktailNode(name="Empty Glass", parent=None)
 
-    def load_from_json(self, json_path: str):
+    def build_tree_from_json(self, json_path: str):
 
         #JSON 파일을 읽어서 CocktailNode 트리로 변환합니다.
         with open(json_path, "r", encoding="utf-8") as f:
