@@ -186,6 +186,24 @@ def main_menu():
                 st.rerun()
             else:
                 st.error("빈칸은 추가할 수 없습니다.")
+                
+        st.markdown("---")
+        # 4-3) 재료 삭제제 입력창
+        st.subheader("➖ 냉장고의 재료 삭제하기")
+        del_ing = st.text_input("삭제할 재료를 입력하세요", key="del_ingredient_input")
+        if st.button("삭제하기"):
+            item = del_ing.strip()
+            if item and item in st.session_state.my_ingredients:
+                st.session_state.my_ingredients.remove(item)
+                userData.save_data(st.session_state.pin, st.session_state.my_ingredients)
+                st.success(f"'{item}' 재료가 삭제되었습니다.")
+                
+                # 추가 후 화면 갱신
+                st.rerun()
+            elif item:
+                st.error(f"{item} 재료는 냉장고에 없습니다.")
+            else:
+                st.error("빈칸은 삭제할 수 없습니다.")
 
     # ───────────────────────────────────────────────────────────────────────────────
     # 5. 추천 재료 보기
