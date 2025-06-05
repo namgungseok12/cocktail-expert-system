@@ -120,7 +120,7 @@ def login() -> Union[int, set]:
 if __name__ == "__main__":
 
     tree = CocktailTree()
-    tree.load_from_json("cocktails.json")
+    tree.build_tree_from_json("cocktails.json")
     userData = UserData()
 
     my_ingredients = set()
