@@ -4,7 +4,7 @@ import pickle
 송민혁 = 20202939
 
 userData = { 
-    남궁석 : {"Gin", "Dry Vermouth", "Olive Brine", "Olive Garnish"},
+    남궁석 : {"Vodka", "Dry Vermouth", "Olive Brine", "Olive Garnish","Orange Juice"},
     송민혁 : {"Gin", "Dry Vermouth", "Olive Brine", "Olive Garnish"},
 }
 
